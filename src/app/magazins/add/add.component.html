@@ -1,0 +1,53 @@
+<div class="container-fluid">
+
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Magazins</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+                        <li class="breadcrumb-item"><a routerLink="/magazins">Magazins</a></li>
+                        
+                        <li class="breadcrumb-item active">Add</li>
+
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="card">
+                
+                <div class="card-body table-responsive p-0">
+                    <form [formGroup]="add" (ngSubmit)="addMagazin()">
+                        <div class="form-group">
+                            <label for="">Label</label>
+                            <input type="text" class="form-control" formControlName="label">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Admin</label>
+                            <select class="form-control" formControlName="idAdmin" >
+                                <option *ngFor="let a of admins" selected value="{{a.id}}">{{a.username}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary" type="submit" [disabled]="! add.valid" >SAVE</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</div>

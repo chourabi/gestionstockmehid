@@ -9,9 +9,13 @@ import { SiginupComponent } from './siginup/siginup.component';
 
 const routes: Routes = [
   { path:'' , canActivate:[AuthGuard] , component:HomeComponent },
-  { path:'home' , canActivate:[AuthGuard] , component:HomeComponent },
+  { path:'home' , canActivate:[AuthGuard] , component:HomeComponent , children:[
+    { path: 'magazins', loadChildren: () => import('./magazins/magazins.module').then(m => m.MagazinsModule) },
+    
+  ] },
   { path:'signin'  , component:SigininComponent },
   { path:'signup'  , component:SiginupComponent },
+  
   { path:'**'  , component:NotfoundComponent },
   
   

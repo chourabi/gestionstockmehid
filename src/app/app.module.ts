@@ -8,7 +8,10 @@ import { SiginupComponent } from './siginup/siginup.component';
 import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { FooterComponent } from './footer/footer.component'
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { HttpClientModule } from '@angular/common/http'
     SigininComponent,
     SiginupComponent,
     HomeComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    NavbarComponent,
+    SidebarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
